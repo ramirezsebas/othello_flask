@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Othello</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <h1>Othello</h1>
+    </div>
+    <!-- <div>
+        <table id="othello_table">
+          <tbody id="othello_table_body"></tbody>
+        </table>
+    </div> -->
+
+    <div id="comparativo">
+      <table>
+        <thead>
+          <tr>
+            <th>Algoritmo</th>
+            <th>Tiempo (ms)</th>
+            <th>Cantidad de Nodos Expandidos</th>
+            <th>Nivel de Corte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Minimax</td>
+            <td id="minimax_time">1</td>
+            <td id="minimax_expanded_nodes"></td>
+            <td id="minimax_cut_level"></td>
+          </tr>
+          <tr>
+            <td>Minimax con poda alfa-beta</td>
+            <td id="minimax_ab_time"></td>
+            <td id="minimax_ab_expanded_nodes"></td>
+            <td id="minimax_ab_cut_level"></td>
+          </tr>
+          <tr>
+            <td>Reinforcement Learning</td>
+            <td id="rf_time"></td>
+            <td id="rf_expanded_nodes"></td>
+            <td id="rf_cut_level"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
